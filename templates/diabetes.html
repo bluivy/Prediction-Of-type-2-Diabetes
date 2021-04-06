@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Diabetes Prediction</h1>
+      <div class="row center">
+
+        <br>
+        </h5>
+      </div>
+     
+      <div class="row">
+        <form action='/predict' method="POST" class="col s12">
+
+          <div class="row">
+            <div class="input-field col s4">
+              <label for="first_name"><b> Name </b></label>
+              <br>
+              <input required id="first_name" name='name' type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="age"><b> Age </b></label>
+              <br>
+              <input required id="age" name='age' type="text" class="validate">
+            </div>
+            <label for="age"><b> Gender </b></label>
+              <br>
+              <input required id="gender" name='gender' type="text" class="validate">
+            <div class="input-field col s4">
+              <label for="first_name"><b> pregnancies </b></label>
+              <br>
+              <input required id="first_name" name='pregnancies' type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+
+              <label for="glucose"><b> Blood Glucose level </b></label>
+              <br>
+              <input id="glucose" required name="glucose" type="text" class="validate">
+
+            </div>
+
+            <div class="input-field col s4">
+              <label for="bloodpressure"><b>Blood Pressure </b></label>
+              <br>
+              <input id="bloodpressure" required name="bloodpressure" type="text" class="validate">
+
+            </div>
+            <div class="input-field col s4">
+              <label for="first_name"><b>Skin Thickness </b></label>
+              <br>
+              <input id="skinthickness" required name='skinthickness' type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="Insulin"><b>Insulin</b></label>
+              <br>
+              <input id="Insulin" required name='Insulin' type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="BMI"><b>BMI</b></label>
+              <br>
+              <input id="BMI" name='BMI' type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="first_name"><b>DiabetesPedigreeFunction</b></label>
+              <br>
+              <input required id="DiabetesPedigreeFunction" name='DiabetesPedigreeFunction' type="text"
+                class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="age"><b> age </b></label>
+              <br>
+              <input required id="age" name='age ' type="text" class="validate">
+            </div>
+
+          </div>
+
+          <div class="row center">
+
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+          </div>
+        </form>
+      </div>
+
+      <br>
+      <h4 align="center" <b>{{pred}}</b></h4>
+      <br>
+
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>
